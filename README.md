@@ -127,6 +127,13 @@ sh portal-daemon.sh --once       # 单轮守护
 
 ---
 
+## 参与贡献
+
+见 [CONTRIBUTING.md](CONTRIBUTING.md)。提交前请确认没有真实账号、学校名、IP、MAC 或抓包文件。
+安全相关问题走 [SECURITY.md](SECURITY.md) 的私密报告渠道，不要开公开 Issue。
+
+---
+
 ## 参考与致谢
 
 这些开源项目是本领域的基础设施，本文的实现建立在它们之上：

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 账号安全 / 越权风险
+    url: https://github.com/14219/campus-portal-reverse/security/advisories/new
+    about: 涉及账号泄露、未授权访问、绕过计费的问题请走私密报告，不要开公开 Issue
