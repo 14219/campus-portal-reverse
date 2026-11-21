@@ -1,0 +1,16 @@
+# 凭证：绝不入库
+portal-cred.conf
+.portal-cred
+*.cred
+.env
+
+# 抓包与日志（可能含账号、密码、MAC）
+*.pcap
+*.pcapng
+*.log
+*.json
+!docs/**
+
+# 系统垃圾
+.DS_Store
+Thumbs.db

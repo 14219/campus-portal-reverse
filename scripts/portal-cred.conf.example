@@ -1,0 +1,46 @@
+# 校园网门户凭证与参数配置
+# ------------------------------------------------------------------
+# 部署：复制为 /root/portal-cred.conf 并修改
+#   cp portal-cred.conf.example /root/portal-cred.conf
+#   chmod 600 /root/portal-cred.conf        # 必须：文件里有明文密码
+#
+# 注意：本文件已被 .gitignore 排除，永远不要提交到仓库。
+# ------------------------------------------------------------------
+
+# ---- 账号 ----
+# 登录时填的"账号"。可能是学号、手机号或 学号@域名，以你学校门户为准。
+USER_ACCOUNT="202500000000@DOMAIN"
+# 明文密码。authByRas=false 时不需要 RSA 加密（见第 1 篇）
+USER_PASSWORD="YOUR_PASSWORD_HERE"
+
+# ---- 门户 ----
+# 门户域名（从浏览器地址栏或跳转 URL 里看）
+PORTAL_HOST="portal.example.edu.cn"
+# 门户真实 IP。仅当你本机 DNS 解析不到 PORTAL_HOST 时才需要填，
+# 填了会走 curl --resolve 强制指定；留空则走系统 DNS。
+PORTAL_IP=""
+
+# 认证服务器（BRAS/NAS）地址与名称。
+# 可从跳转 URL 的 wlanacIp / wlanacname 参数，或 PortalJsonAction.do
+# 返回的 serverForm.serverip / servername 里取。脚本会自动用跳转 URL 覆盖。
+NAS_IP="10.20.16.2"
+AC_NAME="BRAS-01"
+
+# ---- 网络接口 ----
+# 承担认证的接口名。OpenWrt 上通常是 wan；软路由可能是 eth3 / pppoe-wan。
+WAN_IF="wan"
+
+# ---- 可选 ----
+# 固定 VLAN。多数情况下脚本会从跳转 URL 自动解析，留空即可。
+# 若你的环境跳转 URL 不带 vlan，再在这里填死。
+DEFAULT_VLAN=""
+
+# 自定义 UA（部分学校校验 UA 是否为官方客户端）
+PORTAL_UA=""
+
+# 接口路径。深澜 Portal 默认如下；若你学校不同，改这里即可。
+P_PATH_CONFIG="/PortalJsonAction.do"
+P_PATH_LOGIN="/quickauth.do"
+P_PATH_LOGOUT="/quickauthdisconn.do"
+P_PATH_ONLINE="/portal/getOnlineUserName.do"
+P_PATH_REMOTE="/portal/getRemoteAddr.do"
