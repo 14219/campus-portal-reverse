@@ -49,7 +49,7 @@
 ## 快速开始
 
 ```sh
-git clone <this-repo> && cd campus-portal-reverse/scripts
+git clone https://github.com/14219/campus-portal-reverse.git && cd campus-portal-reverse/scripts
 
 cp portal-cred.conf.example portal-cred.conf
 vi portal-cred.conf              # 填账号、密码、门户域名、BRAS 名
@@ -71,8 +71,9 @@ sh portal-daemon.sh --once       # 单轮守护
 
 ```
 .
-├── README.md
+├── README.md / CONTRIBUTING.md / SECURITY.md / CODE_OF_CONDUCT.md
 ├── LICENSE                     MIT
+├── .github/                    Issue / PR 模板、安全报告入口
 ├── docs/
 │   ├── 01-抓包与协议还原.md
 │   ├── 02-校园网如何发现你掉线.md
